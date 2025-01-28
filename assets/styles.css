@@ -58,16 +58,13 @@ a{
 /* HERO CONTAIER */
 
 .hero-home{
-    background: linear-gradient(to bottom, var(--light-gray) 60%, white 40%);
+    background: linear-gradient(to bottom, var(--light-gray) 50%, white 50%);
     height: 95vh;
 }
 
 
 /* NAVBAR */
-.dropdown:hover .dropdown-menu {
-    display: block;
 
-}
 
 .nav-link{
     font-size: 1.1rem;
@@ -79,24 +76,30 @@ a{
 }
 
 .dropdown-menu {
-    top: 125%;
+    display: block  !important;
+    top: 130%;
     left: 0;
-    display: none; /* Initially hidden */
-    position: absolute; /* Required for proper placement */
-    opacity: 0; /* For smooth transition */
+    opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3sec ease;
     --bs-dropdown-padding-y: 0;
     --bs-dropdown-border-radius: 0;
     background-color: var(--light-gray);
-
+    clip-path: inset(0 0 100% 0); /* Completely hidden at first */
+    transition: opacity 0.4s ease-out, clip-path 0.4s ease-out;
+    z-index: 1000;
 }
-.nav-item:hover .dropdown-menu {
+
+.nav-item:hover > .dropdown-menu {
     display: block;
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* Slide into position */
+    clip-path: inset(0 0 0 0); /* Gradually reveals from top to bottom */
+}
+
+.nav-item:hover > .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
 
 }
 
@@ -162,4 +165,8 @@ a{
     margin-top: 2rem;
     margin-bottom: 2rem;
 
+}
+
+#navLogo{
+    height: 70px;
 }
