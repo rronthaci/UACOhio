@@ -4,162 +4,501 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.typekit.net/tqd6nkv.css">
     <link rel="stylesheet" href="/assets/styles.css">
     <title>UAC Ohio</title>
 </head>
 <body>
 
+    <!--ENTIRE NAVBAR-->
     <nav class="navbar navbar-expand-lg">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!-- Collapsible Navbar Content -->
-            <div class="d-flex align-items-center w-100 justify-content-between">
-                <!-- Left Section Links -->
-                <div class="collapse navbar-collapse justify-content-end me-4" id="leftNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">About</a>
-                            <!-- Mega Menu -->
-                            <div class="dropdown-menu">
-                                <div class="dropdown-menu-container d-flex flex-row">
-                                    <div class="dropdown-menu-img-container flex-column h-100">
-                                        <img class="dropdown-menu-img w-100 object-fit-cover" src="./assets/images/stuedentsSample.jpg" alt="Sample">
-                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20"><h4>About UAC</h4></div>
-                                    </div>
-                                    <div class="dropdown-menu-link-container d-flex flex-row justify-content-center align-items-center">
-                                        <ul class="nav-dropdown-list">
-                                            <li>Link 1</li>
-                                            <li>Link 2</li>
-                                            <li>Link 3</li>
-                                            <li>Link 4</li>
-                                        </ul>
-                                        <ul class="nav-dropdown-list">
-                                            <li>Link 5</li>
-                                            <li>Link 6</li>
-                                            <li>Link 7</li>
-                                            <li>Link 8</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Student Life</a>
-                            <!-- Mega Menu -->
-                            <div class="dropdown-menu">
-                                <div class="dropdown-menu-container d-flex flex-row">
-                                    <div class="dropdown-menu-img-container flex-column h-100">
-                                        <img class="dropdown-menu-img w-100 object-fit-cover" src="./assets/images/studentLifeSample.jpg" alt="Sample">
-                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20"><h4>Student Life</h4></div>
-                                    </div>
-                                    <div class="dropdown-menu-link-container d-flex flex-row justify-content-center align-items-center">
-                                        <ul class="nav-dropdown-list">
-                                            <li>Event 1</li>
-                                            <li>Event 2</li>
-                                            <li>Event 3</li>
-                                            <li>Event 4</li>
-                                        </ul>
-                                        <ul class="nav-dropdown-list">
-                                            <li>Club 1</li>
-                                            <li>Club 2</li>
-                                            <li>Club 3</li>
-                                            <li>Club 4</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Academics</a>
-                            <!-- Mega Menu -->
-                            <div class="dropdown-menu">
-                                <div class="dropdown-menu-container d-flex flex-row">
-                                    <div class="dropdown-menu-img-container flex-column h-100">
-                                        <img class="dropdown-menu-img w-100 object-fit-cover" src="./assets/images/academicsSample.jpg" alt="Sample">
-                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20"><h4>Academics</h4></div>
-                                    </div>
-                                    <div class="dropdown-menu-link-container d-flex flex-row justify-content-center align-items-center">
-                                        <ul class="nav-dropdown-list">
-                                            <li>Program 1</li>
-                                            <li>Program 2</li>
-                                            <li>Program 3</li>
-                                            <li>Program 4</li>
-                                        </ul>
-                                        <ul class="nav-dropdown-list">
-                                            <li>Course 1</li>
-                                            <li>Course 2</li>
-                                            <li>Course 3</li>
-                                            <li>Course 4</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <!--Container for Left/Logo/Right-->
+        <div class="container-fluid d-flex align-items-center">
 
-                <!-- Logo -->
-                <a class="navbar-brand" href="./index.html">
-                    <img id="navLogo" src="./assets/images/UACLogo.png" alt="Logo">
-                </a>
+            <!-- MOBILE LOGO (Hidden on desktop, visible on mobile) -->
+            <a class="navbar-brand navbar-brand-mobile d-lg-none" href="./index.html">
+                <img id="navLogoMobile" src="./assets/images/UACLogo.png" alt="Logo">
+            </a>
 
-                <!-- Right Section Links -->
-                <div class="collapse navbar-collapse justify ms-4" id="rightNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Athletics</a>
-                            <!-- Mega Menu -->
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <div class="dropdown-menu-container d-flex flex-row">
-                                    <div class="dropdown-menu-img-container flex-column h-100">
-                                        <img class="dropdown-menu-img w-100 object-fit-cover" src="./assets/images/athleticsSample.jpg" alt="Sample">
-                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
-                                            <h4>Athletics</h4>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-menu-link-container d-flex flex-row justify-content-center align-items-center">
-                                        <ul class="nav-dropdown-list">
-                                            <li>Sport 1</li>
-                                            <li>Sport 2</li>
-                                            <li>Sport 3</li>
-                                            <li>Sport 4</li>
-                                        </ul>
-                                        <ul class="nav-dropdown-list">
-                                            <li>Team 1</li>
-                                            <li>Team 2</li>
-                                            <li>Team 3</li>
-                                            <li>Team 4</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Resources</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Donate</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <!-- Toggler Button for Mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Left Section Nav Container -->
+                <div class="left-side-nav w-100 d-flex justify-content-end" >
+                    <!--Link List-->
+                    <ul class="navbar-nav d-flex align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#"><h2>Home</h2></a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>About</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/studentsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex flex-row justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>About UAC</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row justify-content-center align-items-center">
+                                        <div class="nav-dropdown-list ">
+                                            <a class="megalink" href="">About UAC</a>
+                                            <a class="megalink" href="">Our Mission</a>
+                                            <a class="megalink" href="">Board of Trustees</a>
+                                            <a class="megalink" href="">Head of School Welcome</a>
+                                        </div>
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Employment Opportunities</a>
+                                            <a class="megalink" href="">Directory</a>
+                                            <a class="megalink" href="">Contact</a>
+                                            <a class="megalink" href="">FAQS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Student Life</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/studentLife.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Student Life</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                        
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row justify-content-center align-items-center">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Student Life</a>
+                                            <a class="megalink" href="">Health Policies</a>
+                                            <a class="megalink" href="">Lunch Program</a>
+                                            <a class="megalink" href="">Uniforms</a>
+                                            <a class="megalink" href="">After School Activities</a>
+                                        </div>
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Library</a>
+                                            <a class="megalink" href="">Campus</a>
+                                            <a class="megalink" href="">Community</a>
+                                            <a class="megalink" href="">Student Parent Handbook</a>
+                                            <a class="megalink" href="">Umrah</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Academics</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/academicsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Academics</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                        
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Academics</a>
+                                            <a class="megalink" href="">Elementary School</a>
+                                            <a class="megalink" href="">Middle School</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                    
+                <!-- Logo -->
+                <a class="navbar-brand d-none d-lg-block ms-4 me-4" href="./index.html">
+                    <img id="navLogo" src="./assets/images/UACLogo.png" alt="Logo">
+                </a>
+                
+                <!-- Right Section Links -->
+                <div class="right-side-nav w-100 d-flex justify-content-start">
+                    <ul class="navbar-nav d-flex align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Athletics</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/athleticsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Athletics</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                       
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row justify-content-center align-items-center">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Athletics</a>
+                                            <a class="megalink" href="">Teams</a>
+                                            <a class="megalink" href="">Forms & Fees</a>
+                                        </div>
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Buy Tickets</a>
+                                            <a class="megalink" href="">Registration</a>
+                                            <a class="megalink" href="">Athletic Calendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Resources</h2></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Resources</a></li>
+                                <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                                <li><a class="dropdown-item" href="#">Calendars</a></li>
+                                <li><a class="dropdown-item" href="#">Directions</a></li>
+                                <li><a class="dropdown-item" href="#">Wellness Policy</a></li>
+                                <li><a class="dropdown-item" href="#">Parents</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Donate</h2></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Donate</a></li>
+                                <li><a class="dropdown-item" href="#">Advertise with UAC</a></li>
+                                <li><a class="dropdown-item" href="#">UAC Expansion</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><h2>Apply Now</h2></a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>     
         </div>
     </nav>
+    <div id="navOverlay"></div>
+
+
+    <div class="hero-home d-flex justify-content-center align-items-start">
+        <div class="hero-video-container">
+            <!-- Background Video -->
+            <video autoplay muted loop id="heroVideo">
+                <source src="./assets/videos/hero-sample-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <!-- Overlay -->
+            <div class="hero-overlay"></div>
+        
+            <!-- Text Content (Header & Subheader) -->
+            <div class="hero-text">
+                <h1 class="text-white">Universal Academy <br>of Columbus</h1>
+                <h3 class="text-white"></h3>
+            </div>
+
+            <div class="hero-bottom-section">
+                <hr class="hero-divider">
+                <div class="hero-bottom-content">
+                    <h4 >Building a strong foundation for a stronger future</h4>
+                    <div class="hero-cta d-flex flex-column ">
+                        <div class="hstack gap-2">
+                            <span class="status-text"><h4>Applications currently open</h4></span>
+                            <span class="status-indicator"></span>
+                        </div>
+                        <a href="#" class="icon-link icon-link-hover"><h4>Apply Now</h4><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex flex-column align-items-start mb-4">
+            <div class="small-header mb-2"><h4>Welcome To</h4></div>
+            <h2>Universal Academy of Columbus</h2>
+        </div>
+        <div class="welcome d-flex flex-row">
+            <!-- Left Section -->
+            <div class="welcome-left d-flex flex-column w-25">
+                    <img class="object-fit-cover" src="./assets/images/studentsSample.jpg" height="600px" alt="Logo">
+            </div>
+        
+            <!-- Right Section (Now Fully Inside the Content Box) -->
+            <div class="welcome-right d-flex flex-row align-items-left justify-content-center w-75">
+                <div class="selection-wrapper">
+                    <!-- Vertical Title -->
+                    <div class="vertical-title"><h4>Explore UAC</h4></div>
+                
+                        <!-- Selection Circles -->
+                    <div class="selection-container d-flex flex-column justify-content-center align-items-center me-5">
+                        <div class="selection-option active" data-content="why-choose-us"></div>
+                        <div class="selection-option" data-content="academic-advantage"></div>
+                        <div class="selection-option" data-content="faith-based-environment"></div>
+                    </div>
+                </div>
+                <!-- Selection Content Box (Updated) -->
+                <div class="selection-content d-flex align-items-left justify-content-center flex-column">
+                    <h2 id="selection-title">Why Choose Us?</h2>
+                    <p id="selection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dapibus augue.</p>
+                    <a id="selection-button" class="icon-link icon-link-hover" href="#" ><h4 id="selection-button-text">Learn More</h4><i id="selection-button-arrow" class="bi bi-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="stats-section mt-5 py-5">
+        <div class="container text-center">
+            <!-- stats header Section -->
+            <div class="stats-header d-flex flex-column align-items-start mx-auto">
+                <div class="small-header mb-2"><h4>Academic Highlights</h4></div>
+                <h2>The Proof in the Numbers</h2>
+            </div>
+
+            <!-- Stats Section (Flexbox-based, No Grid) -->
+            <div class="stats-container d-flex justify-content-center gap-5 mt-5">
+                <div class="stat">
+                    <h1 class="counter" data-target="500">0</h1>
+                    <h4 class="stat-label">Active Students</h4>
+                </div>
+                <div class="stat">
+                    <h1 class="counter" data-target="100">0</h1>
+                    <h4 class="stat-label">Qualfied Educators</h4>
+                </div>
+                <div class="stat">
+                    <h1 class="counter" data-target="10">0</h1>
+                    <h4 class="stat-label">Clubs Offered</h4>
+                </div>
+                <div class="stat">
+                    <h1 class="counter" data-target="9">0</h1>
+                    <h4 class="stat-label">SQFT Campus</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-carousel-section py-5">
+        <div class="container">
+            <!-- Subheader and Header -->
+            <div class="blog-section-header mb-4 d-flex flex-column align-items-start mx-auto">
+                <div class="small-header mb-2"><h4>Student Life</h4></div>
+                <h2>Latest Blog Updates</h2>
+            </div>
+    
+            <!-- Bootstrap Carousel -->
+            <div id="blogCarousel" class="carousel slide">
+                <div class="carousel-inner">
+            
+                    <!-- First Slide (Group 1) -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/academicsSample.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Science Fair Winners</h5>
+                                        <p class="card-text text-muted">February 10, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/athleticsSample.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Soccer Team Triumph</h5>
+                                        <p class="card-text text-muted">February 8, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/studentLife.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Drama Club Showcase</h5>
+                                        <p class="card-text text-muted">February 5, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Second Slide (Group 2) -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/academicsSample.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Community Service Day</h5>
+                                        <p class="card-text text-muted">January 30, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/athleticsSample.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Coding Hackathon</h5>
+                                        <p class="card-text text-muted">January 25, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <img src="./assets/images/studentLife.jpg" class="card-img-top" alt="Blog Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Basketball Playoffs</h5>
+                                        <p class="card-text text-muted">January 20, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <!-- Left Arrow -->
+                <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+            
+                <!-- Right Arrow -->
+                <button class="carousel-control-next custom-arrow" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
+            <div id="blog-button"><a class="icon-link icon-link-hover mt-3" href="#"><h4>View Full Blog</h4><i class="bi bi-chevron-right"></i></a></div>
+            
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+
+    <section class="upcoming-events-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+           <div class="d-flex flex-column align-items-start mb-4">
+            <div class="small-header mb-2"><h4>Upcoming Events</h4></div>
+            <h2>What's Happening At UAC</h2>
+        </div>
+    
+            <!-- Event Cards Row -->
+            <div class="row justify-content-center">
+                <!-- Event Card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/academicsSample.jpg" class="card-img-top" alt="Event Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Science Fair 2025</h3>
+                            <p class="card-text text-muted">March 15, 2025</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Event Card 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/athleticsSample.jpg" class="card-img-top" alt="Event Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Annual Sports Day</h3>
+                            <p class="card-text text-muted">April 10, 2025</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Event Card 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/studentLife.jpg" class="card-img-top" alt="Event Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Spring Music Festival</h3>
+                            <p class="card-text text-muted">May 22, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="inner-footer d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Logo Section -->
+                    <div class="col-md-3 text-center text-md-start">
+                        <img src="./assets/images/UACLogo.png" alt="School Logo" class="footer-logo">
+                    </div>
+    
+                    <!-- Contact Information -->
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="footer-heading">Quick Links</h2>
+                                <a href=""><p>Home</p></a>
+                                <a href=""><p>About</p></a>
+                                <a href=""><p>Academics</p></a>
+                                <a href=""><p>Student Life</p></a>
+                                <a href=""><p>Athletics</p></a>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <h2 class="footer-heading">Contact Us</h2>
+                                <p><i class="bi bi-geo-alt"></i>1234 Example Address </p>
+                                <p><i class="bi bi-telephone"></i>+1 123 4567</p>
+                                <p><i class="bi bi-envelope"></i>example@example.com</p>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <a href="#" class="icon-link icon-link-hover footer-apply"><h4 class="mb-0">Apply Now</h4><i class="bi bi-chevron-right"></i></a>
+                                <div class="footer-social d-flex flex-row justify-content-start gap-3 mt-3">
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Links -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p class="footer-links">
+                    <a href="#">Go-to Guides & Policies</a> |
+                    <a href="#">Cookie Policy</a> |
+                    <a href="#">Contract</a> |
+                    <a href="#">Inspection Reports</a> |
+                    © 2025 Universal Academy of Columbus | Design by <a href="#">Your Company</a>
+                </p>
+            </div>
+        </div>
+    
+    </footer>
+    
+    
+    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/script.js"></script>
