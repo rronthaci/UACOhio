@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board of Trustees</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tqd6nkv.css">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <!--Container for Left/Logo/Right-->
+        <div class="container-fluid d-flex align-items-center">
+            <!-- MOBILE LOGO (Hidden on desktop, visible on mobile) -->
+            <a class="navbar-brand navbar-brand-mobile d-lg-none" href="./index.html">
+                <img id="navLogoMobile" src="./assets/images/UACLogo.png" alt="Logo">
+            </a>
+
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Left Section Nav Container -->
+                <div class="left-side-nav w-100 d-flex justify-content-end" >
+                    <!--Link List-->
+                    <ul class="navbar-nav d-flex align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="./index.html"><h2>Home</h2></a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./about.html"><h2>About</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/studentsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex flex-row justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>About UAC</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row justify-content-center">
+                                        <div class="nav-dropdown-list ">
+                                            <a class="megalink" href="./about.html">About UAC</a>
+                                            <a class="megalink" href="./board-of-trustees.html">Board of Trustees</a>
+                                            <a class="megalink" href="./employment.html">Employment Opportunities</a>
+                                        </div>
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Directory</a>
+                                            <a class="megalink" href="">Contact</a>
+                                            <a class="megalink" href="">FAQS</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-social">
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Admissions</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/studentLife.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Admissions</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                        
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Admissions</a>
+                                            <a class="megalink" href="">Tuition and Fees</a>
+                                            <a class="megalink" href="">Financial Aid</a>
+                                            <a class="megalink" href="">Scholarships</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-social">
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Academics</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/academicsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Academics</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                        
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Academics</a>
+                                            <a class="megalink" href="">Elementary School</a>
+                                            <a class="megalink" href="">Middle School</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-social">
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                    
+                <!-- Logo -->
+                <a class="navbar-brand d-none d-lg-block ms-4 me-4" href="./index.html">
+                    <img id="navLogo" src="./assets/images/UACLogo.png" alt="Logo">
+                </a>
+                
+                <!-- Right Section Links -->
+                <div class="right-side-nav w-100 d-flex justify-content-start">
+                    <ul class="navbar-nav d-flex align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Student Life</h2></a>
+                            <!-- Mega Menu -->
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div class="megamenu d-flex flex-row">
+                                    <div class="megamenu-left flex-column h-100">
+                                        <img class="megamenu-img w-100 object-fit-cover" src="./assets/images/athleticsSample.jpg" alt="Sample">
+                                        <div class="megamenu-buttons d-flex justify-content-center align-items-center h-20">
+                                            <a class="icon-link icon-link-hover" href="#">
+                                                <h4>Student Life</h4>
+                                                <i class="bi bi-chevron-right"></i>
+                                              </a>                                       
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-right d-flex flex-row justify-content-center">
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Student Life</a>
+                                            <a class="megalink" href="">Student Information</a>
+                                            <a class="megalink" href="">Athletics</a>
+                                            <a class="megalink" href="">Blog</a>
+                                            
+                                        </div>
+                                        <div class="nav-dropdown-list">
+                                            <a class="megalink" href="">Campus</a>
+                                            <a class="megalink" href="">After School Activities</a>
+                                            <a class="megalink" href="">Umrah</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-social">
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Resources</h2></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Resources</a></li>
+                                <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                                <li><a class="dropdown-item" href="#">Calendars</a></li>
+                                <li><a class="dropdown-item" href="#">Directions</a></li>
+                                <li><a class="dropdown-item" href="#">Wellness Policy</a></li>
+                                <li><a class="dropdown-item" href="#">Parents</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#"><h2>Donate</h2></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Donate</a></li>
+                                <li><a class="dropdown-item" href="#">Advertise with UAC</a></li>
+                                <li><a class="dropdown-item" href="#">UAC Expansion</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><h2>Apply Now</h2></a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>     
+        </div>
+    </nav>
+    <div id="navOverlay"></div>
+
+    <div class="hero-page-secondary">
+        <h1>Board of Trustees</h1>
+        <h3>Leading with vision and dedication</h3>
+    </div>
+
+    <!-- Breadcrumbs Component -->
+    <div class="breadcrumbs-wrapper-secondary">
+        <div class="breadcrumbs-inner">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <h4 class="mb-0 d-inline">
+                        <a href="index.html" class="text-secondary text-decoration-none">HOME</a>
+                    </h4>
+                </li>
+                <li class="breadcrumb-item">
+                    <h4 class="mb-0 d-inline">
+                        <a href="about.html" class="text-secondary text-decoration-none">ABOUT</a>
+                    </h4>
+                </li>
+                <li class="breadcrumb-item active text-secondary" aria-current="page">
+                    <h4 class="mb-0 d-inline text-secondary">BOARD OF TRUSTEES</h4>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="container page-container d-flex align-items-start">
+        <div class="sidebar">
+            <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                <div class="small-header mb-2">
+                    <h4>Explore More</h4>
+                </div>
+                <h2>Learn More About UAC</h2>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">About <i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="./about.html">About UAC</a>
+                        <a href="./board-of-trustees.html">Board of Trustees</a>
+                        <a href="./employment.html">Employment Opportunities</a>
+                        <a href="#">Directory</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQS</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">Admissions<i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="#">Apply</a>
+                        <a href="#">Tuition & Financial Aid</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">Academics <i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="#">Academics</a>
+                        <a href="#">Elementary School</a>
+                        <a href="#">Middle School</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">Student Life<i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="#">Student Life</a>
+                        <a href="#">Student Info</a>
+                        <a href="#">Athletics</a>
+                        <a href="#">Student Blog</a>
+                        <a href="#">Campus Info</a>
+                        <a href="#">After School Activities</a>
+                        <a href="#">Umrah</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">Donate<i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="#">Donate</a>
+                        <a href="#">Advertise With UAC</a>
+                        <a href="#">UAC Expansion</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 onclick="toggleAccordion(this)">Resources<i class="icon bi bi-plus"></i></h2>
+                    <div class="accordion-content">
+                        <a href="#">Resources</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">Gallery</a>
+                        <a href="#">Calendars</a>
+                        <a href="#">Directions</a>
+                        <a href="#">Wellness Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container d-flex align-items-center">
+            <!-- First Section -->
+            <div class="page-content-greybox">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <div class="small-header mb-2">
+                        <h4>Leadership</h4>
+                    </div>
+                    <h2>Our Board of Trustees</h2>
+                </div>
+                <img class="mb-4" src="./assets/images/academicsSample.jpg" alt="Board Meeting">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <h3>Guiding Our Future</h3>
+                    <p>The Board of Trustees at UAC is composed of dedicated community leaders, educators, and professionals who provide strategic direction and oversight to ensure the school's continued excellence and growth.</p>
+                </div>
+            </div>
+
+            <!-- Second Section -->
+            <div class="page-content-whitebox">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <div class="small-header mb-2">
+                        <h4>Members</h4>
+                    </div>
+                    <h2>Meet Our Trustees</h2>
+                </div>
+                <img class="mb-4" src="./assets/images/academicsSample.jpg" alt="Trustees">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <h3>Dedicated Leadership</h3>
+                    <p>Our trustees bring diverse expertise and experience to guide UAC's mission of providing exceptional Islamic education while fostering academic excellence and community values.</p>
+                </div>
+            </div>
+
+            <!-- Third Section -->
+            <div class="page-content-bluebox">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <div class="small-header mb-2">
+                        <h4>Commitment</h4>
+                    </div>
+                    <h2>Our Vision</h2>
+                </div>
+                <img class="mb-4" src="./assets/images/academicsSample.jpg" alt="Vision">
+                <div class="d-flex flex-column align-items-start mt-2 mb-4">
+                    <h3>Building Tomorrow's Leaders</h3>
+                    <p>The Board is committed to ensuring UAC remains at the forefront of Islamic education, providing students with the tools and knowledge they need to succeed in both their academic and spiritual journeys.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- ... existing code ... -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/general.js"></script>
+    <script src="./assets/secondary-pages.js"></script>
+</body>
+</html> 

@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ✅ Attach event listeners for the accordion
+    const accordionHeaders = document.querySelectorAll(".accordion h2");
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener("click", function () {
+            toggleAccordion(this);
+        });
+    });
+
+    function toggleAccordion(element) {
+        const content = element.nextElementSibling;
+        const icon = element.querySelector('.icon');
+    
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+            content.style.maxHeight = "0px"; // Collapse
+            icon.classList.replace("bi-dash", "bi-plus"); // Change to plus icon
+        } else {
+            // Close other open items before opening a new one
+            document.querySelectorAll(".accordion-content").forEach((item) => {
+                item.style.maxHeight = "0px";
+            });
+    
+            document.querySelectorAll(".icon").forEach((icon) => {
+                icon.classList.replace("bi-dash", "bi-plus"); // Reset all icons to plus
+            });
+    
+            content.style.maxHeight = content.scrollHeight + "px"; // Expand
+            icon.classList.replace("bi-plus", "bi-dash"); // Change to minus icon
+        }
+    }
+
+    // ✅ Fix Mobile Dropdown Menu Handling
     function isMobileView() {
         return window.innerWidth < 992; // Bootstrap lg breakpoint
     }
@@ -10,37 +42,32 @@ document.addEventListener("DOMContentLoaded", function () {
             const link = dropdown.querySelector(".nav-link");
 
             if (isMobileView()) {
-                // Remove dropdown behavior but keep the link
                 link.setAttribute("href", "#");
                 link.addEventListener("click", function () {
                     window.location.href = this.dataset.href;
                 });
 
-                dropdown.style.display = "block"; // Ensure it remains visible
+                dropdown.style.display = "block";
             } else {
-                // Restore original behavior in desktop view
                 link.removeAttribute("href");
                 dropdown.style.display = "flex";
             }
         });
     }
 
-    // Store original href values
     document.querySelectorAll(".nav-item.dropdown .nav-link").forEach(link => {
-        link.dataset.href = link.getAttribute("href"); // Save original link
+        link.dataset.href = link.getAttribute("href");
     });
 
-    // Run function on page load and window resize
     updateMenu();
     window.addEventListener("resize", updateMenu);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // ✅ Fix Overlay for Desktop Dropdowns
     const navOverlay = document.getElementById("navOverlay");
     const dropdowns = document.querySelectorAll(".nav-item.dropdown");
 
     function showOverlay() {
-        if (window.innerWidth >= 992) { // Only enable on desktop
+        if (window.innerWidth >= 992) {
             navOverlay.style.opacity = "1";
             navOverlay.style.visibility = "visible";
         }
@@ -56,8 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdown.addEventListener("mouseleave", hideOverlay);
     });
 
-
-
+    // ✅ Fix Automatic Content Cycling
     const options = document.querySelectorAll(".selection-option");
     const contentBox = document.querySelector(".selection-content");
     const title = document.getElementById("selection-title");
@@ -65,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("selection-button");
     const buttonText = document.getElementById("selection-button-text");
 
-    // Content Mapping
     const contentData = {
         "why-choose-us": {
             title: "Why Choose Us?",
@@ -87,38 +112,56 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    options.forEach(option => {
-        option.addEventListener("click", function () {
-            // Remove 'active' class from all options
-            options.forEach(opt => opt.classList.remove("active"));
-            this.classList.add("active");
+    let currentIndex = 0;
+    let interval;
 
-            // Get the data-content value
-            const contentKey = this.getAttribute("data-content");
+    function changeSelection(index) {
+        options.forEach(opt => opt.classList.remove("active"));
+        options[index].classList.add("active");
 
-            // Reset animation by forcing a reflow (trick)
-            contentBox.classList.remove("active");
-            void contentBox.offsetWidth; // Triggers reflow to restart animation
+        const contentKey = options[index].getAttribute("data-content");
+
+        contentBox.classList.remove("fade-in");
+        contentBox.classList.add("fade-out");
+
+        setTimeout(() => {
+            title.textContent = contentData[contentKey].title;
+            text.textContent = contentData[contentKey].text;
+            buttonText.textContent = contentData[contentKey].buttonText;
+            button.href = contentData[contentKey].buttonLink;
+
+            void contentBox.offsetWidth;
+
+            contentBox.classList.remove("fade-out");
             contentBox.classList.add("fade-in");
+        }, 300);
+    }
 
-            // Change content after animation delay
-            setTimeout(() => {
-                title.textContent = contentData[contentKey].title;
-                text.textContent = contentData[contentKey].text;
-                document.getElementById("selection-button-text").textContent = contentData[contentKey].buttonText; // FIXED
-                button.href= contentData[contentKey].buttonLink;
+    function startAutoCycle() {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % options.length;
+            changeSelection(currentIndex);
+        }, 5000);
+    }
 
-                // Remove fade-in class & add active class to fade back in
-                contentBox.classList.remove("fade-in");
-                contentBox.classList.add("active");
-            }, 300); // Delay matches CSS transition time
+    function resetAutoCycle() {
+        clearInterval(interval);
+        startAutoCycle();
+    }
+
+    options.forEach((option, index) => {
+        option.addEventListener("click", function () {
+            currentIndex = index;
+            changeSelection(currentIndex);
+            resetAutoCycle();
         });
     });
 
+    startAutoCycle();
 
-
+    // ✅ Fix Counter Animation
     const counters = document.querySelectorAll(".counter");
-    const animationDuration = 2000; // All numbers finish in 2 seconds
+    const animationDuration = 2000;
 
     function animateCounters() {
         const startTime = performance.now();
@@ -139,16 +182,14 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(updateCounters);
     }
 
-    // Run animation when section becomes visible
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounters();
-                observer.disconnect(); // Stop observing after animation runs
+                observer.disconnect();
             }
         });
     }, { threshold: 0.5 });
 
     observer.observe(document.querySelector(".stats-section"));
-
 });
